@@ -1,3 +1,116 @@
+Alumnos@P046 MINGW64 ~/Documents/examenGitBash
+$ git config --global user.name 'RBiri'
+
+Alumnos@P046 MINGW64 ~/Documents/examenGitBash
+$ git config --global user.email 'rubengapa97@gmail.com'
+
+Alumnos@P046 MINGW64 ~/Documents/examenGitBash
+$ git clone https://github.com/RBiri/git-desde-Bash
+Cloning into 'git-desde-Bash'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Receiving objects: 100% (3/3), done.
+
+Alumnos@P046 MINGW64 ~/Documents/examenGitBash
+$ git branch ramaBash2
+fatal: not a git repository (or any of the parent directories): .git
+
+Alumnos@P046 MINGW64 ~/Documents/examenGitBash
+$ cd git-desde-Bash/
+
+Alumnos@P046 MINGW64 ~/Documents/examenGitBash/git-desde-Bash (main)
+$ git branch ramaBash2
+
+Alumnos@P046 MINGW64 ~/Documents/examenGitBash/git-desde-Bash (main)
+$ git checkout ramaBash2
+Switched to branch 'ramaBash2'
+
+Alumnos@P046 MINGW64 ~/Documents/examenGitBash/git-desde-Bash (ramaBash2)
+$ git commit -m modificando la ramabash2
+error: pathspec 'la' did not match any file(s) known to git
+error: pathspec 'ramabash2' did not match any file(s) known to git
+
+Alumnos@P046 MINGW64 ~/Documents/examenGitBash/git-desde-Bash (ramaBash2)
+$ git commit -m 'modificando la ramabash2'
+On branch ramaBash2
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Alumnos@P046 MINGW64 ~/Documents/examenGitBash/git-desde-Bash (ramaBash2)
+$ git add index.html
+
+Alumnos@P046 MINGW64 ~/Documents/examenGitBash/git-desde-Bash (ramaBash2)
+$ git commit -m 'modificando la ramabash2'
+[ramaBash2 a0fd074] modificando la ramabash2
+ 1 file changed, 1 insertion(+)
+
+Alumnos@P046 MINGW64 ~/Documents/examenGitBash/git-desde-Bash (ramaBash2)
+$ git push origin ramaBash2
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 323 bytes | 323.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ramaBash2' on GitHub by visiting:
+remote:      https://github.com/RBiri/git-desde-Bash/pull/new/ramaBash2
+remote:
+To https://github.com/RBiri/git-desde-Bash
+ * [new branch]      ramaBash2 -> ramaBash2
+
+Alumnos@P046 MINGW64 ~/Documents/examenGitBash/git-desde-Bash (ramaBash2)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+Alumnos@P046 MINGW64 ~/Documents/examenGitBash/git-desde-Bash (main)
+$ git merge ramaBash2
+Updating d4c24b2..a0fd074
+Fast-forward
+ index.html | 1 +
+ 1 file changed, 1 insertion(+)
+
+Alumnos@P046 MINGW64 ~/Documents/examenGitBash/git-desde-Bash (main)
+$ git commit -m 'merge con la rama main'
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+Alumnos@P046 MINGW64 ~/Documents/examenGitBash/git-desde-Bash (main)
+$ git push origin main
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/RBiri/git-desde-Bash
+   d4c24b2..a0fd074  main -> main
+
+Alumnos@P046 MINGW64 ~/Documents/examenGitBash/git-desde-Bash (main)
+$ git log
+commit a0fd074911b7b8bc886dda97b67ee5fecb884c12 (HEAD -> main, origin/ramaBash2, origin/main, origin/HEAD, ramaBash2)
+Author: RBiri <rubengapa97@gmail.com>
+Date:   Mon Nov 6 12:19:40 2023 +0100
+
+    modificando la ramabash2
+
+commit d4c24b204968b5cb33e0d2bf7e674ea5a9c7891b
+Author: RBiri <36742493+RBiri@users.noreply.github.com>
+Date:   Mon Nov 6 12:07:37 2023 +0100
+
+    primera subida para test desde git bash
+
+Alumnos@P046 MINGW64 ~/Documents/examenGitBash/git-desde-Bash (main)
+$ git checkout ramaBash2
+Switched to branch 'ramaBash2'
+
+Alumnos@P046 MINGW64 ~/Documents/examenGitBash/git-desde-Bash (ramaBash2)
 $ git log
 commit a0fd074911b7b8bc886dda97b67ee5fecb884c12 (HEAD -> ramaBash2, origin/ramaBash2, origin/main, origin/HEAD, main)
 Author: RBiri <rubengapa97@gmail.com>
@@ -10,3 +123,77 @@ Author: RBiri <36742493+RBiri@users.noreply.github.com>
 Date:   Mon Nov 6 12:07:37 2023 +0100
 
     primera subida para test desde git bash
+
+Alumnos@P046 MINGW64 ~/Documents/examenGitBash/git-desde-Bash (ramaBash2)
+$ git log -p
+commit a0fd074911b7b8bc886dda97b67ee5fecb884c12 (HEAD -> ramaBash2, origin/ramaBash2, origin/main, origin/HEAD, main)
+Author: RBiri <rubengapa97@gmail.com>
+Date:   Mon Nov 6 12:19:40 2023 +0100
+
+    modificando la ramabash2
+
+diff --git a/index.html b/index.html
+index 0803aee..9d02a93 100644
+--- a/index.html
++++ b/index.html
+@@ -7,5 +7,6 @@
+ </head>
+ <body>
+     <h1>Esto es un archivo de prueba para git bash</h1>
++    <h2>mensaje en la ramaBash2</h2>^M
+ </body>
+ </html>
+\ No newline at end of file
+
+commit d4c24b204968b5cb33e0d2bf7e674ea5a9c7891b
+Author: RBiri <36742493+RBiri@users.noreply.github.com>
+Date:   Mon Nov 6 12:07:37 2023 +0100
+:...skipping...
+commit a0fd074911b7b8bc886dda97b67ee5fecb884c12 (HEAD -> ramaBash2, origin/ramaBash2, origin/main, origin/HEAD, main)
+Author: RBiri <rubengapa97@gmail.com>
+Date:   Mon Nov 6 12:19:40 2023 +0100
+
+    modificando la ramabash2
+
+diff --git a/index.html b/index.html
+index 0803aee..9d02a93 100644
+--- a/index.html
++++ b/index.html
+@@ -7,5 +7,6 @@
+ </head>
+ <body>
+     <h1>Esto es un archivo de prueba para git bash</h1>
++    <h2>mensaje en la ramaBash2</h2>^M
+ </body>
+ </html>
+\ No newline at end of file
+
+commit d4c24b204968b5cb33e0d2bf7e674ea5a9c7891b
+Author: RBiri <36742493+RBiri@users.noreply.github.com>
+Date:   Mon Nov 6 12:07:37 2023 +0100
+
+    primera subida para test desde git bash
+
+diff --git a/index.html b/index.html
+new file mode 100644
+index 0000000..0803aee
+--- /dev/null
++++ b/index.html
+@@ -0,0 +1,11 @@
++<!DOCTYPE html>^M
++<html lang="en">^M
++<head>^M
++    <meta charset="UTF-8">^M
++    <meta name="viewport" content="width=device-width, initial-scale=1.0">^M
++    <title>Document</title>^M
++</head>^M
+
+Alumnos@P046 MINGW64 ~/Documents/examenGitBash/git-desde-Bash (ramaBash2)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+Alumnos@P046 MINGW64 ~/Documents/examenGitBash/git-desde-Bash (main)
+$ git branch -d ramaBash2
+Deleted branch ramaBash2 (was a0fd074).
+
