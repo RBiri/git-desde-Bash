@@ -1,0 +1,12 @@
+$ git log
+commit a0fd074911b7b8bc886dda97b67ee5fecb884c12 (HEAD -> ramaBash2, origin/ramaBash2, origin/main, origin/HEAD, main)
+Author: RBiri <rubengapa97@gmail.com>
+Date:   Mon Nov 6 12:19:40 2023 +0100
+
+    modificando la ramabash2
+
+commit d4c24b204968b5cb33e0d2bf7e674ea5a9c7891b
+Author: RBiri <36742493+RBiri@users.noreply.github.com>
+Date:   Mon Nov 6 12:07:37 2023 +0100
+
+    primera subida para test desde git bash
